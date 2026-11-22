@@ -1,0 +1,9 @@
+{
+  "timestamp_utc": "2026-11-15T19:49:44.943336+00:00",
+  "command": "content-audit",
+  "status": "failed",
+  "elapsed_seconds": 0.048,
+  "detail": {
+    "error": "[WinError 32] Процесс не может получить доступ к файлу, так как этот файл занят другим процессом: 'C:\\\\Users\\\\EVGENNIY\\\\AppData\\\\Local\\\\Packages\\\\openai.codex_2p2nqsd0c76g0\\\\AC\\\\#!sandbox.{7aaaaa96-9341-4f7a-9c05-9c065d386061}\\\\Temp\\\\tmpbqvcm01u\\\\fresh.sqlite3'"
+  }
+}

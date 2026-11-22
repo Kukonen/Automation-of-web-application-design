@@ -1,0 +1,1 @@
+{"label":"Курсы","fields":{"teacher":{"label":"Преподаватель","type":"text","required":true,"max_length":150},"hours":{"label":"Объем в часах","type":"integer","required":true,"minimum":1,"maximum":1000}}}

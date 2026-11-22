@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-22",
+  "format_reference": "ПАСМ, таблицы по правилам ГУАП, § 6",
+  "reports": {
+    "ЛР": {
+      "pages": 13,
+      "sha256": "85460b6186096207cab307894b18f92a2f5c79aafdfa16f1ef3b178ee4724c7e",
+      "tables_verified": 5,
+      "listing_paragraphs_verified": 30
+    },
+    "ПР": {
+      "pages": 12,
+      "sha256": "cf21c08f530f74952e6780f8c580f94d90818796c7b987ea1d4150651af8bb60",
+      "tables_verified": 7,
+      "listing_paragraphs_verified": 13
+    }
+  },
+  "renderer": "Microsoft Word and pypdfium2",
+  "visual_review": "All pages inspected across render iterations. Identical images were verified by pixel comparison after the last pagination adjustment."
+}

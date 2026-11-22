@@ -1,0 +1,7 @@
+{
+  "label": "Объявление",
+  "fields": {
+    "location": {"label": "Место проведения", "type": "text", "required": true, "max_length": 200},
+    "event_date": {"label": "Дата проведения", "type": "date", "required": true}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-11-15T19:52:11.238080+00:00",
+  "command": "content-audit",
+  "status": "passed",
+  "elapsed_seconds": 0.045,
+  "detail": {
+    "schemas": {
+      "course": [
+        "teacher",
+        "hours"
+      ],
+      "event": [
+        "date",
+        "location"
+      ],
+      "news": [
+        "lead"
+      ],
+      "resource": [
+        "url",
+        "format"
+      ]
+    },
+    "fresh_migration": "passed",
+    "types": 4
+  }
+}

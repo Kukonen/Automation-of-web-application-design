@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-15",
+  "unit": "technical_iteration",
+  "acceptance": "Automated technical assessment only; no student or teacher acceptance is implied",
+  "limitations": "One actual working session. No invented 25-iteration history. Existing artifacts prove outcomes; traces preserve available visible actions.",
+  "iterations": [
+    {
+      "id": "00-spec",
+      "stage": 1,
+      "tool": "Codex",
+      "prompt": "Зафиксировать модель, границы, интерфейсы и критерии до генерации.",
+      "result": "auto_accept",
+      "reason": "SPEC 00–03 сохранены до реализации.",
+      "evidence": [
+        "spec/00-project.md",
+        "spec/01-core.md",
+        "spec/02-web.md",
+        "spec/03-harness.md"
+      ]
+    },
+    {
+      "id": "01-core-generation",
+      "stage": 2,
+      "tool": "Codex core agent",
+      "prompt": "Реализовать ядро, схемы, миграции и содержательные тесты по SPEC 01.",
+      "result": "auto_rework",
+      "reason": "Первый прогон 38 тестов прошёл; последующий аудит обнаружил отсутствие actor в служебном get, потребовалась доработка.",
+      "evidence": [
+        "core.py",
+        "tests/test_core.py",
+        "evidence/review.md"
+      ]
+    },
+    {
+      "id": "02-web-generation",
+      "stage": 4,
+      "tool": "Codex web agent",
+      "prompt": "Реализовать WSGI-панель и публичную часть по согласованному API.",
+      "result": "auto_rework",
+      "reason": "Потребовалось согласовать явный actor, права переходов и предел description с ядром.",
+      "evidence": [
+        "web.py",
+        "tests/test_web.py",
+        "evidence/review.md"
+      ]
+    },
+    {
+      "id": "03-guard-generation",
+      "stage": 1,
+      "tool": "Codex",
+      "prompt": "Создать ограниченную оболочку инструментов и шесть начальных отрицательных тестов.",
+      "result": "auto_rework",
+      "reason": "Базовые проверки созданы; независимый аудит позже нашёл обход .ENV по регистру Windows.",
+      "evidence": [
+        "harness/guard.py",
+        "tests/test_harness.py",
+        "harness/history.md"
+      ]
+    },
+    {
+      "id": "04-command-cleanup-fix",
+      "stage": 1,
+      "tool": "Codex",
+      "prompt": "Исправить очистку временной SQLite-базы при выполнении проектной команды на Windows.",
+      "result": "auto_accept",
+      "reason": "Закрытие соединения перед очисткой устранило Win32-ошибку; сохранены реальные повторные протоколы.",
+      "evidence": [
+        "harness/commands.py",
+        "evidence/commands"
+      ]
+    },
+    {
+      "id": "05-free-prompt",
+      "stage": 2,
+      "tool": "Codex audit agent",
+      "prompt": "Добавь для нашей учебной CMS тип объявлений с местом и датой проведения.",
+      "result": "auto_reject",
+      "reason": "Полученная JSON Schema не соответствует контракту label/fields; 0 из 6 критериев, ядро отклонило её.",
+      "evidence": [
+        "harness/experiment/free.json",
+        "evidence/experiment.json"
+      ]
+    },
+    {
+      "id": "06-spec-prompt",
+      "stage": 2,
+      "tool": "Codex audit agent",
+      "prompt": "Сгенерировать тот же тип с точным контрактом label/fields и ограничениями полей.",
+      "result": "auto_accept",
+      "reason": "6 из 6 критериев; ядро приняло схему. Опыт последовательный, B видел A.",
+      "evidence": [
+        "harness/experiment/spec.json",
+        "harness/experiment/README.md",
+        "evidence/experiment.json"
+      ]
+    },
+    {
+      "id": "07-independent-audit",
+      "stage": 5,
+      "tool": "Codex independent audit agent",
+      "prompt": "Воспроизвести отрицательные сценарии защиты без изменения кода реализации.",
+      "result": "auto_accept",
+      "reason": "Независимая проверка выявила дефекты get и .ENV; дана техническая рекомендация исправить.",
+      "evidence": [
+        "evidence/review.md",
+        "traces/audit-session.jsonl"
+      ]
+    },
+    {
+      "id": "08-service-read-fix",
+      "stage": 2,
+      "tool": "Codex core agent",
+      "prompt": "Разделить внутреннее чтение и get с проверкой actor; добавить отрицательные тесты.",
+      "result": "auto_accept",
+      "reason": "Добавлены проверки анонима и автора чужого черновика; 40 core-тестов прошли.",
+      "evidence": [
+        "core.py",
+        "tests/test_core.py",
+        "evidence/review.md"
+      ]
+    },
+    {
+      "id": "09-guard-casefold-fix",
+      "stage": 1,
+      "tool": "Codex",
+      "prompt": "Нормализовать регистр и проверять исходный и разрешённый пути.",
+      "result": "auto_accept",
+      "reason": ".ENV и .ENV.local блокируются; недоступный на Windows опыт с symlink явно отмечен как пропущенный.",
+      "evidence": [
+        "harness/guard.py",
+        "tests/test_harness.py",
+        "harness/history.md",
+        "evidence/review.md"
+      ]
+    },
+    {
+      "id": "10-web-contract-fix",
+      "stage": 3,
+      "tool": "Codex web agent",
+      "prompt": "Передать actor, согласовать права переходов и maxlength description с сервисом.",
+      "result": "auto_accept",
+      "reason": "Прямой WSGI-сценарий подтвердил вход, правку, переход и предел 300/301 символ.",
+      "evidence": [
+        "web.py",
+        "tests/test_web.py",
+        "evidence/review.md"
+      ]
+    },
+    {
+      "id": "11-env-loader",
+      "stage": 1,
+      "tool": "Codex",
+      "prompt": "Загрузить только CMS-настройки из .env без выполнения shell и вывода значений.",
+      "result": "auto_accept",
+      "reason": "Добавлен whitelist-loader с приоритетом уже заданных переменных среды. Настоящий .env при подготовке трасс не читался.",
+      "evidence": [
+        "app.py"
+      ]
+    },
+    {
+      "id": "12-defense",
+      "stage": 5,
+      "tool": "Codex core agent",
+      "prompt": "Подготовить ответы на все контрольные вопросы двух заданий по реальному коду.",
+      "result": "auto_accept",
+      "reason": "Созданы ответы на 15 вопросов ЛР и 14 ПР; личные действия студента не выдуманы.",
+      "evidence": [
+        "DEFENSE.md"
+      ]
+    },
+    {
+      "id": "13-repeat-audit",
+      "stage": 5,
+      "tool": "Codex independent audit agent",
+      "prompt": "Повторно проверить исправления get, guard, actor и maxlength.",
+      "result": "auto_accept",
+      "reason": "Адресный прогон: 11 тестов, 10 прошли, 1 пропущен; отдельный WSGI-сценарий прошёл. Блокировка HTTP-сокетов аудитора раскрыта.",
+      "evidence": [
+        "evidence/review.md"
+      ]
+    },
+    {
+      "id": "14-visible-trace-export",
+      "stage": 5,
+      "tool": "Codex core agent",
+      "prompt": "Экспортировать разрешённые видимые события, аннотации, реальный журнал и производные метрики.",
+      "result": "auto_accept",
+      "reason": "Снимок исключает скрытые данные и ciphertext; полнота и ограничения описаны отдельно.",
+      "evidence": [
+        "tools/export_traces.py",
+        "traces/README.md",
+        "traces/manifest.json",
+        "traces/annotated.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "registered_tests": 60,
+  "skipped": 1,
+  "elapsed_seconds": 7.425,
+  "core": 40,
+  "http": 10,
+  "env": 1,
+  "harness": 9,
+  "lint_issues": 0,
+  "protocol": "evidence/commands/1794772784683469700-release-check.json"
+}

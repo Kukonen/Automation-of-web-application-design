@@ -1,0 +1,1 @@
+{"label":"Мероприятия","fields":{"date":{"label":"Дата проведения","type":"date","required":true},"location":{"label":"Место","type":"text","required":true,"max_length":200}}}

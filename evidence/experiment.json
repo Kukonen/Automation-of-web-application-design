@@ -1,0 +1,31 @@
+{
+  "free": {
+    "checks": {
+      "root_contract": false,
+      "field_names": false,
+      "location_type": false,
+      "location_limit": false,
+      "required": false,
+      "date_type": false
+    },
+    "passed_criteria": 0,
+    "total_criteria": 6,
+    "core_accepted": false,
+    "error": "Схема должна содержать label и fields"
+  },
+  "spec": {
+    "checks": {
+      "root_contract": true,
+      "field_names": true,
+      "location_type": true,
+      "location_limit": true,
+      "required": true,
+      "date_type": true
+    },
+    "passed_criteria": 6,
+    "total_criteria": 6,
+    "core_accepted": true,
+    "error": null
+  },
+  "design": "Sequential A then B; same agent; B saw A; n=1 per prompt; no timing inference."
+}

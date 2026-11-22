@@ -1,0 +1,215 @@
+{
+  "timestamp": "2026-11-15T20:09:41.457559+00:00",
+  "command": ".\\run.ps1 -Port 8082",
+  "clean_before_start": true,
+  "python_and_Pillow": "already available in Codex bundled runtime",
+  "responses": {
+    "/": {
+      "status": 200,
+      "bytes": 5665
+    },
+    "/api/materials": {
+      "status": 200,
+      "bytes": 6114,
+      "json": {
+        "items": [
+          {
+            "id": 8,
+            "type": "resource",
+            "title": "Руководство SQLite",
+            "slug": "sqlite-docs",
+            "body": "Документация по запросам, транзакциям и ограничениям SQLite.",
+            "description": "Документация по запросам, транзакциям и ограничениям SQLite.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "url": "https://www.sqlite.org/docs.html",
+              "format": "Документация"
+            },
+            "category": "Материалы",
+            "tags": [
+              "базы данных"
+            ]
+          },
+          {
+            "id": 7,
+            "type": "resource",
+            "title": "Документация Python",
+            "slug": "python-docs",
+            "body": "Официальный справочник стандартной библиотеки.",
+            "description": "Официальный справочник стандартной библиотеки.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "url": "https://docs.python.org/3/",
+              "format": "Справочник"
+            },
+            "category": "Материалы",
+            "tags": [
+              "python",
+              "документация"
+            ]
+          },
+          {
+            "id": 6,
+            "type": "event",
+            "title": "Семинар по тестированию",
+            "slug": "testing-seminar",
+            "body": "Разберём сценарии проверки прав доступа, публикации и восстановления ревизий.",
+            "description": "Разберём сценарии проверки прав доступа, публикации и восстановления ревизий.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "date": "2026-12-03",
+              "location": "Аудитория 41"
+            },
+            "category": "События",
+            "tags": [
+              "тестирование"
+            ]
+          },
+          {
+            "id": 5,
+            "type": "event",
+            "title": "Демонстрация учебных CMS",
+            "slug": "cms-demo",
+            "body": "Каждая команда покажет публикацию материала и изменение контентной схемы.",
+            "description": "Каждая команда покажет публикацию материала и изменение контентной схемы.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "date": "2026-12-10",
+              "location": "Учебная лаборатория"
+            },
+            "category": "События",
+            "tags": [
+              "проекты",
+              "cms"
+            ]
+          },
+          {
+            "id": 4,
+            "type": "course",
+            "title": "Практикум по Python",
+            "slug": "python-course",
+            "body": "Разработка прикладных сервисов и автоматизированных проверок.",
+            "description": "Разработка прикладных сервисов и автоматизированных проверок.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "teacher": "Учебная лаборатория",
+              "hours": 36
+            },
+            "category": "Обучение",
+            "tags": [
+              "python"
+            ]
+          },
+          {
+            "id": 3,
+            "type": "course",
+            "title": "Проектирование интернет приложений",
+            "slug": "web-design",
+            "body": "Контентные модели, архитектура, интерфейсы и проверка качества.",
+            "description": "Контентные модели, архитектура, интерфейсы и проверка качества.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "teacher": "Кафедра информационных систем",
+              "hours": 72
+            },
+            "category": "Обучение",
+            "tags": [
+              "веб",
+              "архитектура"
+            ]
+          },
+          {
+            "id": 2,
+            "type": "news",
+            "title": "Неделя открытых проектов",
+            "slug": "open-projects",
+            "body": "Студенты представят прототипы и обсудят результаты независимой проверки.",
+            "description": "Студенты представят прототипы и обсудят результаты независимой проверки.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "lead": "Приглашаем на демонстрации"
+            },
+            "category": "Новости кафедры",
+            "tags": [
+              "проекты"
+            ]
+          },
+          {
+            "id": 1,
+            "type": "news",
+            "title": "Открыта мастерская интернет приложений",
+            "slug": "internet-workshop",
+            "body": "Практикум объединяет проектирование, разработку и проверку учебных веб-систем.",
+            "description": "Практикум объединяет проектирование, разработку и проверку учебных веб-систем.",
+            "status": "published",
+            "author_id": 3,
+            "revision": 3,
+            "created_at": "2026-11-15T20:09:06+00:00",
+            "updated_at": "2026-11-15T20:09:06+00:00",
+            "published_at": "2026-11-15T20:09:06+00:00",
+            "author_name": "author",
+            "fields": {
+              "lead": "От идеи до работающего приложения"
+            },
+            "category": "Новости кафедры",
+            "tags": [
+              "разработка",
+              "практика"
+            ]
+          }
+        ],
+        "total": 8,
+        "page": 1,
+        "page_size": 10,
+        "pages": 1
+      }
+    },
+    "/sitemap.xml": {
+      "status": 200,
+      "bytes": 673
+    }
+  },
+  "database_created": true
+}

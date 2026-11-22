@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "default": "deny",
+  "read": "project-relative paths except .env and symlinks outside project",
+  "execute": ["content-audit", "release-check"],
+  "deny": ["read-secrets", "send-data", "delete", "shell", "outside-project"],
+  "ask": ["publish", "push", "install-system-package"],
+  "note": "Policy is enforced by guard.py for its own entry points only. Operating-system sandbox remains the boundary for arbitrary tools."
+}

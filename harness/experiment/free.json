@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Объявление",
+  "type": "object",
+  "properties": {
+    "title": {"type": "string", "title": "Заголовок", "minLength": 1},
+    "description": {"type": "string", "title": "Описание"},
+    "location": {"type": "string", "title": "Место проведения", "minLength": 1},
+    "event_date": {"type": "string", "title": "Дата проведения", "format": "date"}
+  },
+  "required": ["title", "location", "event_date"],
+  "additionalProperties": false
+}

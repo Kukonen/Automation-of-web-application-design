@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-11-15T19:59:36.567201+00:00",
+  "command": "release-check",
+  "status": "passed",
+  "elapsed_seconds": 8.116,
+  "detail": {
+    "version": "1.0.0",
+    "content": {
+      "schemas": {
+        "course": [
+          "teacher",
+          "hours"
+        ],
+        "event": [
+          "date",
+          "location"
+        ],
+        "news": [
+          "lead"
+        ],
+        "resource": [
+          "url",
+          "format"
+        ]
+      },
+      "fresh_migration": "passed",
+      "types": 4
+    },
+    "checks": "Project lint: 0 issue(s)\ntest_01_migrations_are_idempotent (test_core.CoreTests.test_01_migrations_are_idempotent) ... ok\ntest_02_four_types_loaded (test_core.CoreTests.test_02_four_types_loaded) ... ok\ntest_03_round_trip_preserves_unicode_and_taxonomy (test_core.CoreTests.test_03_round_trip_preserves_unicode_and_taxonomy) ... ok\ntest_04_round_trip_every_content_type (test_core.CoreTests.test_04_round_trip_every_content_type) ... ok\ntest_05_required_field (test_core.CoreTests.test_05_required_field) ... ok\ntest_06_unknown_field_rejected (test_core.CoreTests.test_06_unknown_field_rejected) ... ok\ntest_07_unknown_top_level_field_rejected (test_core.CoreTests.test_07_unknown_top_level_field_rejected) ... ok\ntest_08_integer_validation (test_core.CoreTests.test_08_integer_validation) ... ok\ntest_09_date_validation (test_core.CoreTests.test_09_date_validation) ... ok\ntest_10_unsafe_url_rejected (test_core.CoreTests.test_10_unsafe_url_rejected) ... ok\ntest_11_duplicate_slug_does_not_create_partial_data (test_core.CoreTests.test_11_duplicate_slug_does_not_create_partial_data) ... ok\ntest_12_slug_validation (test_core.CoreTests.test_12_slug_validation) ... ok\ntest_13_invalid_lifecycle_cannot_skip_moderation (test_core.CoreTests.test_13_invalid_lifecycle_cannot_skip_moderation) ... ok\ntest_14_author_cannot_publish (test_core.CoreTests.test_14_author_cannot_publish) ... ok\ntest_15_lifecycle_through_archive (test_core.CoreTests.test_15_lifecycle_through_archive) ... ok\ntest_16_update_creates_immutable_revision (test_core.CoreTests.test_16_update_creates_immutable_revision) ... ok\ntest_17_restore_creates_new_revision_and_draft (test_core.CoreTests.test_17_restore_creates_new_revision_and_draft) ... ok\ntest_18_cannot_restore_other_material_revision (test_core.CoreTests.test_18_cannot_restore_other_material_revision) ... ok\ntest_19_foreign_keys_reject_orphan_taxonomy (test_core.CoreTests.test_19_foreign_keys_reject_orphan_taxonomy) ... ok\ntest_20_taxonomy_filters_and_tag_deduplication (test_core.CoreTests.test_20_taxonomy_filters_and_tag_deduplication) ... ok\ntest_21_public_listing_never_leaks_draft (test_core.CoreTests.test_21_public_listing_never_leaks_draft) ... ok\ntest_22_search_uses_parameters_and_literal_wildcards (test_core.CoreTests.test_22_search_uses_parameters_and_literal_wildcards) ... ok\ntest_23_pagination_and_upper_bound (test_core.CoreTests.test_23_pagination_and_upper_bound) ... ok\ntest_24_authentication_and_hashed_password (test_core.CoreTests.test_24_authentication_and_hashed_password) ... ok\ntest_25_session_expiration_and_logout (test_core.CoreTests.test_25_session_expiration_and_logout) ... ok\ntest_26_roles_matrix_parameterized (test_core.CoreTests.test_26_roles_matrix_parameterized) ... ok\ntest_27_forged_actor_role_does_not_escalate (test_core.CoreTests.test_27_forged_actor_role_does_not_escalate) ... ok\ntest_28_author_cannot_modify_or_list_others (test_core.CoreTests.test_28_author_cannot_modify_or_list_others) ... ok\ntest_29_dynamic_type_registered_without_core_edit (test_core.CoreTests.test_29_dynamic_type_registered_without_core_edit) ... ok\ntest_30_incompatible_schema_change_rejected_atomically (test_core.CoreTests.test_30_incompatible_schema_change_rejected_atomically) ... ok\ntest_31_bulk_is_all_or_nothing_on_forbidden_row (test_core.CoreTests.test_31_bulk_is_all_or_nothing_on_forbidden_row) ... ok\ntest_32_bulk_transition_and_audit (test_core.CoreTests.test_32_bulk_transition_and_audit) ... ok\ntest_33_media_content_validation (test_core.CoreTests.test_33_media_content_validation) ... ok\ntest_34_media_derivatives_and_safe_filename (test_core.CoreTests.test_34_media_derivatives_and_safe_filename) ... ok\ntest_35_metrics_and_restricted_statistics (test_core.CoreTests.test_35_metrics_and_restricted_statistics) ... ok\ntest_36_delete_cascades_revisions_and_links (test_core.CoreTests.test_36_delete_cascades_revisions_and_links) ... ok\ntest_37_seed_is_explicit_and_idempotent (test_core.CoreTests.test_37_seed_is_explicit_and_idempotent) ... ok\ntest_38_failed_update_preserves_taxonomy_and_revision (test_core.CoreTests.test_38_failed_update_preserves_taxonomy_and_revision) ... ok\ntest_39_anonymous_service_get_and_list_are_denied (test_core.CoreTests.test_39_anonymous_service_get_and_list_are_denied) ... ok\ntest_40_author_cannot_read_foreign_draft_via_service (test_core.CoreTests.test_40_author_cannot_read_foreign_draft_via_service) ... ok\ntest_absolute_denied (test_harness.GuardTests.test_absolute_denied) ... ok\ntest_arbitrary_shell_denied (test_harness.GuardTests.test_arbitrary_shell_denied) ... ok\ntest_network_action_denied (test_harness.GuardTests.test_network_action_denied) ... ok\ntest_public_file_allowed (test_harness.GuardTests.test_public_file_allowed) ... ok\ntest_secret_case_denied (test_harness.GuardTests.test_secret_case_denied) ... ok\ntest_secret_denied (test_harness.GuardTests.test_secret_denied) ... ok\ntest_secret_symlink_denied (test_harness.GuardTests.test_secret_symlink_denied) ... skipped 'Creating symlinks is unavailable in this Windows environment'\ntest_secret_variant_denied (test_harness.GuardTests.test_secret_variant_denied) ... ok\ntest_traversal_denied (test_harness.GuardTests.test_traversal_denied) ... ok\ntest_env_preserves_existing_values_and_reads_only_literal_cms_settings (test_web.EnvironmentTests.test_env_preserves_existing_values_and_reads_only_literal_cms_settings) ... ok\ntest_01_public_browse_search_and_api (test_web.HTTPTests.test_01_public_browse_search_and_api) ... ok\ntest_02_http_crud_publish_restore_audit (test_web.HTTPTests.test_02_http_crud_publish_restore_audit) ... ok\ntest_03_role_route_matrix (test_web.HTTPTests.test_03_role_route_matrix) ... ok\ntest_04_csrf_and_logout (test_web.HTTPTests.test_04_csrf_and_logout) ... ok\ntest_05_xss_and_theme (test_web.HTTPTests.test_05_xss_and_theme) ... ok\ntest_06_upload_and_binary_file (test_web.HTTPTests.test_06_upload_and_binary_file) ... ok\ntest_07_seo_headers_and_cookie_flags (test_web.HTTPTests.test_07_seo_headers_and_cookie_flags) ... ok\ntest_08_http_author_cannot_publish_or_edit_others (test_web.HTTPTests.test_08_http_author_cannot_publish_or_edit_others) ... ok\ntest_09_template_escapes_and_limits_names (test_web.HTTPTests.test_09_template_escapes_and_limits_names) ... ok\ntest_10_http_bulk_and_filter (test_web.HTTPTests.test_10_http_bulk_and_filter) ... ok\n\n----------------------------------------------------------------------\nRan 60 tests in 7.425s\n\nOK (skipped=1)\n",
+    "required_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "VERSION",
+      "AGENTS.md"
+    ]
+  }
+}

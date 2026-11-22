@@ -1,0 +1,68 @@
+{
+  "source": "evidence/ai-journal.json",
+  "unit": "technical_iteration",
+  "total_iterations": 15,
+  "results": {
+    "auto_accept": 11,
+    "auto_rework": 3,
+    "auto_reject": 1
+  },
+  "shares": {
+    "auto_accept": 0.7333,
+    "auto_rework": 0.2,
+    "auto_reject": 0.0667
+  },
+  "by_lab_stage": [
+    {
+      "stage": 1,
+      "iterations": 5,
+      "results": {
+        "auto_accept": 4,
+        "auto_rework": 1
+      },
+      "accept_share": 0.8
+    },
+    {
+      "stage": 2,
+      "iterations": 4,
+      "results": {
+        "auto_rework": 1,
+        "auto_reject": 1,
+        "auto_accept": 2
+      },
+      "accept_share": 0.5
+    },
+    {
+      "stage": 3,
+      "iterations": 1,
+      "results": {
+        "auto_accept": 1
+      },
+      "accept_share": 1.0
+    },
+    {
+      "stage": 4,
+      "iterations": 1,
+      "results": {
+        "auto_rework": 1
+      },
+      "accept_share": 0.0
+    },
+    {
+      "stage": 5,
+      "iterations": 4,
+      "results": {
+        "auto_accept": 4
+      },
+      "accept_share": 1.0
+    }
+  ],
+  "not_measured": [
+    "Student acceptance",
+    "Semester history",
+    "Generated/accepted/rewritten source-line shares",
+    "Manual time savings",
+    "Independent model performance"
+  ],
+  "interpretation": "Acceptance labels describe technical review of actual bounded steps. Generation steps later reworked remain rework; fixes are separate steps. Stages are logical work packages, not time periods."
+}

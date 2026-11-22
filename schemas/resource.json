@@ -1,0 +1,1 @@
+{"label":"Учебные ресурсы","fields":{"url":{"label":"Ссылка","type":"url","required":true},"format":{"label":"Формат","type":"text","required":true,"max_length":50}}}

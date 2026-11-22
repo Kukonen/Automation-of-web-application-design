@@ -1,0 +1,99 @@
+{
+  "snapshot_at_utc": "2026-11-15T20:19:41+00:00",
+  "scope": "All allowlisted locally available visible events at the snapshot, sanitized",
+  "inherited_prefix": "Fork files include the inherited root history; do not sum event counts as independent iterations",
+  "sources": [
+    {
+      "alias": "root",
+      "target": "traces/root-session.jsonl",
+      "source_bytes_at_snapshot": 10126168,
+      "source_sha256": "9cb723d9f05aff434c960652cfabca76d4f4134c8fde06af9ce5684609c2624a",
+      "identity_check": "Exact filename suffix, inherited root metadata and matching visible user task",
+      "exported_events": 248,
+      "types": {
+        "message": 11,
+        "custom_tool_call": 54,
+        "custom_tool_call_output": 53,
+        "function_call": 41,
+        "function_call_output": 41,
+        "agent_message": 48
+      },
+      "omitted": {
+        "non_response_item": 520,
+        "non_allowlisted_response_type:additional_tools": 1,
+        "non_visible_message": 5,
+        "non_allowlisted_response_type:reasoning": 83
+      },
+      "export_sha256": "f691606aa5f7ee80fda723abdff88b79ba1b89981ab50100a80fa4a8280ccb10"
+    },
+    {
+      "alias": "audit",
+      "target": "traces/audit-session.jsonl",
+      "source_bytes_at_snapshot": 10397017,
+      "source_sha256": "c639e20829e34f338a5cd19cc53c8260382a1ce4da75ef8db0fc1fbf987950d7",
+      "identity_check": "Exact filename suffix, inherited root metadata and matching visible user task",
+      "exported_events": 155,
+      "types": {
+        "message": 14,
+        "custom_tool_call": 43,
+        "custom_tool_call_output": 43,
+        "function_call": 19,
+        "agent_message": 18,
+        "function_call_output": 18
+      },
+      "omitted": {
+        "non_response_item": 349,
+        "non_allowlisted_response_type:additional_tools": 1,
+        "non_visible_message": 9,
+        "non_allowlisted_response_type:reasoning": 57
+      },
+      "export_sha256": "2f3c41dfd149b7c203708fb8d05f130739f91c1eaa485adf28c91b4ccc839203"
+    },
+    {
+      "alias": "core",
+      "target": "traces/core-session.jsonl",
+      "source_bytes_at_snapshot": 9560284,
+      "source_sha256": "b1f1e6065d69427d107574130fbdeefdb7f7750663c0bec4bd75032e4fbeb483",
+      "identity_check": "Exact filename suffix, inherited root metadata and matching visible user task",
+      "exported_events": 142,
+      "types": {
+        "message": 10,
+        "custom_tool_call": 40,
+        "custom_tool_call_output": 40,
+        "function_call": 21,
+        "function_call_output": 20,
+        "agent_message": 11
+      },
+      "omitted": {
+        "non_response_item": 287,
+        "non_allowlisted_response_type:additional_tools": 1,
+        "non_visible_message": 9,
+        "non_allowlisted_response_type:reasoning": 52
+      },
+      "export_sha256": "5a06e7b4067682f09e10567a3a8a6fc7d61acdd619527c0b8826afbaa1b51b63"
+    },
+    {
+      "alias": "web",
+      "target": "traces/web-session.jsonl",
+      "source_bytes_at_snapshot": 1021219,
+      "source_sha256": "5c3c72df04a8a05e3a263a6ae5518ce7fefbee97c17b81ccf990bd8fbe0ef3d2",
+      "identity_check": "Exact filename suffix, inherited root metadata and matching visible user task",
+      "exported_events": 70,
+      "types": {
+        "message": 5,
+        "custom_tool_call": 18,
+        "custom_tool_call_output": 18,
+        "function_call": 10,
+        "function_call_output": 9,
+        "agent_message": 10
+      },
+      "omitted": {
+        "non_response_item": 100,
+        "non_allowlisted_response_type:additional_tools": 1,
+        "non_visible_message": 9,
+        "non_allowlisted_response_type:reasoning": 16
+      },
+      "export_sha256": "790765fe54f769dcb4fb29795dd908dac7e0c8fd62ee6645d442cf2ce306b3a1"
+    }
+  ]
+}
